@@ -145,7 +145,7 @@ STATICFILES_DIRS = (BASE_DIR / "static",)
 
 STATIC_ROOT = "staticfiles/"
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 CSRF_COOKIE_SECURE = True
 
