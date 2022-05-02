@@ -86,7 +86,7 @@ python-versions = ">=3.7"
 name = "django-debug-toolbar"
 version = "3.3.0"
 description = "A configurable set of panels that display various debug information about the current request/response."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 
@@ -215,7 +215,7 @@ brotli = ["brotli"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "16dfe0d4c1889c3c9a10375549d9e6211402f81713d335e46703a4245796d863"
+content-hash = "20fa85582e035ac3c726baed170ea29aeb61b9e851488385227dfc12e0677fa6"
 
 [metadata.files]
 asgiref = [
