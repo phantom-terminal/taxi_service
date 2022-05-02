@@ -1,7 +1,16 @@
 {% extends "base.html" %}
+{% load crispy_forms_filters %}
 
 {% block content %}
     <h1>Car list</h1>
+
+    <form action="" method="get" class="form-inline">
+        {{ search_form|crispy }}
+        <button class="btn btn-secondary" style="margin-left: 10px">
+            <img src="/static/img/search.svg" style="margin-bottom: 2px" height="20" width="20" alt="Add" />
+        </button>
+    </form>
+    
     {% if car_list %}
         <ul>
             {% for car in car_list %}
@@ -19,4 +28,5 @@
         {% csrf_token %}
         <input type="submit" value="Create Car" class="btn btn-primary"/>
     </form>
+    <br>
 {% endblock %}

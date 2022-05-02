@@ -4,6 +4,7 @@ from django.urls import reverse
 
 
 class Manufacturer(models.Model):
+    """Model representing a Manufacturer (e.g. Tesla, Ford)."""
     name = models.CharField(max_length=255)
     country = models.CharField(max_length=255)
 
@@ -15,6 +16,7 @@ class Manufacturer(models.Model):
 
 
 class Driver(AbstractUser):
+    """Model representing a user."""
     license_number = models.CharField(max_length=255, unique=True)
 
     class Meta:
@@ -29,6 +31,7 @@ class Driver(AbstractUser):
 
 
 class Car(models.Model):
+    """Model representing a Car model (e.g. Model S, Model T)."""
     model = models.CharField(max_length=255)
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
     drivers = models.ManyToManyField(Driver, related_name="cars")
